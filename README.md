@@ -6,7 +6,7 @@ Fabric mod for minecraft 1.15.2 that expands on underwater gameplay elements.
 
 Seaglide - A kind of diver propulsion vehicle that increases movement speed underwater when held. Increased underwater mobility is a key component to making underwater gameplay more interesting.
 
-Diving Equipment - Gotta be able to breath. However this equipment should not be infinite, but be easily refillable. Ideally wearing a simple tank and simple mask would increase the amount of time each bubble takes on the hud so that no new gui is not needed. Simple tanks are refilled simply by reaching air and waiting. More advanced tanks may require a compressor machine.
+Diving Equipment - Gotta be able to breath. However this equipment should not be infinite, but be easily refillable. Ideally wearing a simple tank and simple mask would increase the amount of time each bubble takes on the hud so that no new gui is needed. Simple tanks are refilled simply by reaching air and waiting. More advanced tanks may require a compressor machine.
 
 World Gen - Various items that make it totally possible to survive without access to dry land. Craft-able sponges for base building.
 
