@@ -1,4 +1,4 @@
-package net.fabricmc.nauticamod;
+package net.fabricmc.nauticraft;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Item;
