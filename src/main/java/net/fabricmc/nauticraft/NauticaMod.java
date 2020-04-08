@@ -18,6 +18,6 @@ public class NauticaMod implements ModInitializer {
 		System.out.println("Hello Fabric world!");
 
 		//Add Item to game.
-		Registry.register(Registry.ITEM, new Identifier("nauticamod", "example_item"), EXAMPLE_ITEM);
+		Registry.register(Registry.ITEM, new Identifier("nauticraft", "example_item"), EXAMPLE_ITEM);
 	}
 }
