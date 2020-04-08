@@ -21,6 +21,18 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
+
+	//PlayerAbilityLib by Ladysnake. Used for modifying player abilities.
+	modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+	include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+}
+
+//Dependencies
+repositories {
+	maven {
+		name = "Ladysnake Libs"
+		url = 'https://dl.bintray.com/ladysnake/libs'
+	}
 }
 
 processResources {
@@ -70,8 +82,8 @@ publishing {
 	}
 
 	// select the repositories you want to publish to
+	// Noob Note: this is not where dependencies go.
 	repositories {
-		// uncomment to publish to the local maven
-		// mavenLocal()
+		//maven {}
 	}
 }
