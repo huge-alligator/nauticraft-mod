@@ -1,9 +1,7 @@
 package net.fabricmc.nauticraft;
 
-import io.github.ladysnake.pal.VanillaAbilities;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.nauticraft.items.AbilityToggleItem;
-import net.fabricmc.nauticraft.items.SprintItem;
+import net.fabricmc.nauticraft.items.UnderwaterMovementItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
@@ -11,6 +9,7 @@ import net.minecraft.util.registry.Registry;
 
 public class NauticaMod implements ModInitializer {
 
+	// Dynamically create identifiers
 	public static Identifier id(String path){
 		return new Identifier("nauticraft", path);
 	}
@@ -23,7 +22,7 @@ public class NauticaMod implements ModInitializer {
 		//System.out.println("Hello Fabric world!");
 
 		//Add Item to game.
-		Registry.register(Registry.ITEM, id("example_item"), new SprintItem(new Item.Settings().group(ItemGroup.MISC), 0.05f));
-		Registry.register(Registry.ITEM, id("flight_ring"), new AbilityToggleItem(new Item.Settings().group(ItemGroup.TOOLS).maxCount(1), VanillaAbilities.ALLOW_FLYING, id("flight_ring")));
+		Registry.register(Registry.ITEM, id("example_item"), new Item(new Item.Settings().group(ItemGroup.MISC)));
+		Registry.register(Registry.ITEM, id("dpv_basic"), new UnderwaterMovementItem(new Item.Settings().group(ItemGroup.TOOLS).maxCount(1), 0.05f));
 	}
 }

@@ -10,11 +10,11 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class SprintItem extends Item {
+public class UnderwaterMovementItem extends Item {
 
     float speedMult = 1;
 
-    public SprintItem(Settings settings, float speed){
+    public UnderwaterMovementItem(Settings settings, float speed){
         super(settings);
         speedMult = speed;
     }
