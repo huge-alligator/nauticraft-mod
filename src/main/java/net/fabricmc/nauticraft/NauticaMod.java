@@ -23,7 +23,7 @@ public class NauticaMod implements ModInitializer {
 		//System.out.println("Hello Fabric world!");
 
 		//Add Item to game.
-		Registry.register(Registry.ITEM, id("example_item"), new SprintItem(new Item.Settings().group(ItemGroup.MISC), 2));
+		Registry.register(Registry.ITEM, id("example_item"), new SprintItem(new Item.Settings().group(ItemGroup.MISC), 0.05f));
 		Registry.register(Registry.ITEM, id("flight_ring"), new AbilityToggleItem(new Item.Settings().group(ItemGroup.TOOLS).maxCount(1), VanillaAbilities.ALLOW_FLYING, id("flight_ring")));
 	}
 }

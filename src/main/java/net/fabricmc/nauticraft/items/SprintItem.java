@@ -1,5 +1,6 @@
 package net.fabricmc.nauticraft.items;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,30 +18,19 @@ public class SprintItem extends Item {
         super(settings);
         speedMult = speed;
     }
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand){
 
-        if(user.isSwimming()){
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        PlayerEntity user;
+        if (entity instanceof PlayerEntity) {
+            user = (PlayerEntity)entity;
+            if(user.isSwimming() && user.getMainHandStack() == stack){
+                Vec3d rot = user.getRotationVector();
+                Vec3d vel = user.getVelocity();
 
-            Vec3d rot = user.getRotationVector();
-            Vec3d vel = user.getVelocity();
-
-            user.setVelocity(vel.add(rot.x * speedMult, rot.y *speedMult, rot.z * speedMult));
+                user.setVelocity(vel.add(rot.x * speedMult, rot.y *speedMult, rot.z * speedMult));
+            }
         }
-
-        return TypedActionResult.success(user.getStackInHand(hand));
-    }
-
-    public void inventoryTick(ItemStack stack, World world, PlayerEntity user, int slot, boolean selected) {
-        /* if(user.isSwimming() && user.getItemsHand() == stack.getItem()){
-            Vec3d rot = user.getRotationVector();
-            Vec3d vel = user.getVelocity();
-
-            user.setVelocity(vel.add(rot.x * speedMult, rot.y *speedMult, rot.z * speedMult));
-        } */
-
-        if(user.getItemsHand() == stack.getItem()){
-            user.addChatMessage(new LiteralText("Inventory tick"), false);
-        }
+        super.inventoryTick(stack, world, entity, slot, selected);
     }
 }
 

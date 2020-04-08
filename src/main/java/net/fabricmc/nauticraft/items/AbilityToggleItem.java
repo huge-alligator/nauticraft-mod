@@ -46,16 +46,4 @@ public class AbilityToggleItem extends Item {
         return TypedActionResult.success(user.getStackInHand(hand));
     }
 
-    /*
-    public void inventoryTick(ItemStack stack, World world, PlayerEntity entity, int slot, boolean selected) {
-        if(!world.isClient){
-            if(slot > 35){
-                abilitySource.grantTo(entity, this.ability);
-            }else{
-                abilitySource.revokeFrom(entity, this.ability);
-            }
-        }
-    }
-    */
-
 }
