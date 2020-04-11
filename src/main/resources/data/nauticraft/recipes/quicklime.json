@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "techreborn:calcite_dust"
+  },
+  "result": "nauticraft:quicklime",
+  "experience": 0.1,
+  "cookingtime": 100
+}

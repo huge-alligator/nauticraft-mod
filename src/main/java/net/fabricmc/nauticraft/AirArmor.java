@@ -2,19 +2,18 @@ package net.fabricmc.nauticraft;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import reborncore.common.util.ItemDurabilityExtensions;
+import team.reborn.energy.EnergyHolder;
 
-public class AirArmor extends ArmorItem {
-
+public class AirArmor extends ArmorItem //implements EnergyHolder, ItemDurabilityExtensions {
+{
     private  EquipmentSlot slotIn;
     private  Integer breathingTime;
 

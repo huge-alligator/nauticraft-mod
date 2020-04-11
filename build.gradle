@@ -19,6 +19,18 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+	//Reborn Core
+	def rcVersion = 'RebornCore:RebornCore-1.15:+'
+		modApi (rcVersion) {
+			exclude group: "net.fabricmc"
+		}
+		include rcVersion
+
+	//TR Energy API
+	modApi 'teamreborn:energy:0.1.0'
+	include 'teamreborn:energy:0.1.0'
+
+	modImplementation 'TechReborn:TechReborn-1.15:3.3.8+build.216'
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
 
