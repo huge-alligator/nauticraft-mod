@@ -2,10 +2,7 @@ package net.fabricmc.nauticraft;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterials;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import team.reborn.energy.EnergyTier;
@@ -16,6 +13,7 @@ public class NauticaMod implements ModInitializer {
 	public static Identifier id(String path){ return new Identifier("nauticraft", path); }
 	//Ugh
 	public static Item AIR_MASK = new ArmorItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.TOOLS));
+	public static Item AIR_TANK = new AirArmor(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.TOOLS), 1200);
 
 	@Override
 	public void onInitialize() {
@@ -34,6 +32,6 @@ public class NauticaMod implements ModInitializer {
 		//Breathing stuff.
 		Registry.register(Registry.ITEM, id("air_mask"), AIR_MASK);
 		Registry.register(Registry.ITEM, id("re_breather"), new AirArmor(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.TOOLS), 6000));
-		Registry.register(Registry.ITEM, id("air_tank"), new AirArmor(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.TOOLS), 1200));
+		Registry.register(Registry.ITEM, id("air_tank"), AIR_TANK);
 	}
 }

@@ -30,7 +30,11 @@ dependencies {
 	modApi 'teamreborn:energy:0.1.0'
 	include 'teamreborn:energy:0.1.0'
 
+	//TechReborn itself
 	modImplementation 'TechReborn:TechReborn-1.15:3.3.8+build.216'
+
+	//nbtcrafting for gooy nbt goodness
+	modImplementation "com.github.siphalor:nbt-crafting:2.0.0-alpha.16"
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
 
@@ -87,6 +91,13 @@ publishing {
 	// select the repositories you want to publish to
 	// Noob Note: this is not where dependencies go.
 	repositories {
-		//maven {}
+
+	}
+}
+repositories {
+	// Here go other maven servers
+	maven {
+		name "jitpack"
+		url "https://jitpack.io"
 	}
 }

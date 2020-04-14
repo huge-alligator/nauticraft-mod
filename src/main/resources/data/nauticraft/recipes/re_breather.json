@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nauticraft:re_breather"
+    },
+    {
+      "item": "nauticraft:quicklime"
+    }
+  ],
+  "result": {
+    "item": "nauticraft:re_breather",
+    "count": 1
+  }
+}
